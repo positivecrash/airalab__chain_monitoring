@@ -16,7 +16,6 @@ header[role='banner']
   }
 
 
-
 #header-logo
   {
     @extend %inline-block;
@@ -39,6 +38,7 @@ header[role='banner']
     margin-bottom: 0;
     list-style: none;
     text-align: right;
+    background-color: $c-blue;
 
     @extend %inlineBlock-fix;
 
@@ -67,7 +67,11 @@ header[role='banner']
         &.current-menu-item a
           {
             cursor: default;
-            background-color: $c-gray-0;
+            &, &:hover
+              {
+                background-color: $c-gray-0;
+                background-color: $c-gray-0 !important;
+              }
           }
       }
   }
@@ -105,7 +109,6 @@ header[role='banner']
         right: 0;
         left: 0;
         top: 80px;
-        background-color: $c-blue;
 
         padding:  $vertical-rythm/2 $padding-base-side  $vertical-rythm;
     
@@ -124,6 +127,24 @@ header[role='banner']
             opacity: 0;
             visibility: visible;
             animation: 0.3s fadeIn ease-in forwards;
+          }
+      }
+  }
+
+
+.logged
+  {
+     header[role='banner'] { background-color: #E02D28; }
+     .header-nav
+      {
+        background-color: #E02D28;
+        
+        li
+          {
+            a:hover
+              {
+                background-color: darken(#E02D28, 5%);
+              }
           }
       }
   }

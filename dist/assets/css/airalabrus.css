@@ -347,6 +347,7 @@ header[role='banner'] a {
   margin-bottom: 0;
   list-style: none;
   text-align: right;
+  background-color: #03A5ED;
 }
 .header-nav li {
   display: inline-block;
@@ -364,7 +365,10 @@ header[role='banner'] a {
 }
 .header-nav li.current-menu-item a {
   cursor: default;
+}
+.header-nav li.current-menu-item a, .header-nav li.current-menu-item a:hover {
   background-color: #282A2B;
+  background-color: #282A2B !important;
 }
 
 #header-nav-toggler {
@@ -397,7 +401,6 @@ header[role='banner'] a {
     right: 0;
     left: 0;
     top: 80px;
-    background-color: #03A5ED;
     padding: 9.6px 20px 19.2px;
   }
   .header-nav li {
@@ -414,6 +417,16 @@ header[role='banner'] a {
             animation: 0.3s fadeIn ease-in forwards;
   }
 }
+.logged header[role='banner'] {
+  background-color: #E02D28;
+}
+.logged .header-nav {
+  background-color: #E02D28;
+}
+.logged .header-nav li a:hover {
+  background-color: #d0231e;
+}
+
 footer[role='contentinfo'] {
   color: #747677;
   position: absolute;
