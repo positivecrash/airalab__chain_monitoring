@@ -1,0 +1,64 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+// @keyframes jello {
+//   0% {
+//     transform: none
+//   }
+//   5% {
+//     transform: skewX(8deg) skewY(-5deg)
+//   }
+//   10% {
+//     transform: skewX(10deg) skewY(-6deg)
+//   }
+//   20% {
+//     transform: skewX(-6deg) skewY(-6deg)
+//   }
+//   30% {
+//     transform: skewX(6deg) skewY(6deg)
+//   }
+//   40% {
+//     transform: skewX(-3deg) skewY(-3deg)
+//   }
+//   50% {
+//     transform: skewX(3deg) skewY(3deg)
+//   }
+//   60% {
+//     transform: skewX(-2.5deg) skewY(-2.5deg)
+//   }
+//   70% {
+//     transform: skewX(2.5deg) skewY(2.5deg)
+//   }
+//   80% {
+//     transform: skewX(-1.5deg) skewY(-1.5deg)
+//   }
+//   90% {
+//     transform: skewX(1.5deg) skewY(1.5deg)
+//   }
+//   100% {
+//     transform: none
+//   }
+// }
+
+
+// #{$modernizr-cssanimations} .animation-jello {
+//   animation: fadeIn .5s ease-in forwards, jello 1.5s forwards;
+//   transform-origin: center;
+// }

@@ -1,0 +1,35 @@
+$icons: (
+    sprite: (width: 109px, height: 40px, pngPath: '../i/sprite.png?9', svgPath: '../i/sprite.svg?9'),
+    check: (width: 28.36px, height: 16.31px, backgroundX: 0px, backgroundY: 0px),
+    hamburger: (width: 40px, height: 40px, backgroundX: -29px, backgroundY: 0px),
+    hamburger-close: (width: 40px, height: 40px, backgroundX: -69px, backgroundY: 0px),
+);
+
+$sprite: map-get($icons, sprite);
+
+%back_svg{ background-image: url(map-get($sprite, svgPath)); }
+%back_png{ background-image: url(map-get($sprite, pngPath)); }
+
+@mixin get-sprite($spritename){
+    $spritename: map-get($icons, $spritename);
+    
+    width: map-get($spritename, width);
+    height: map-get($spritename, height);
+    background-position: map-get($spritename, backgroundX) map-get($spritename, backgroundY);
+
+    @extend %back_png;
+    .svg & { @extend %back_svg; }
+}
+
+.sprite-basic-check{
+  @include get-sprite('check');
+  @extend %inline-block;
+}
+.sprite-basic-hamburger{
+  @include get-sprite('hamburger');
+  @extend %inline-block;
+}
+.sprite-basic-hamburger-close{
+  @include get-sprite('hamburger-close');
+  @extend %inline-block;
+}

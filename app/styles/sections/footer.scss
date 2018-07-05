@@ -1,0 +1,33 @@
+footer[role='contentinfo']
+  {
+    background-color: $c-dark-green;
+    &, a { color: #fff; }
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    padding: 20px 0;
+
+
+    .form-inline
+      {
+        max-width: 457px;
+      }
+
+     @include maxTablet()
+      {
+
+        .footer-row
+          {
+            .d-t_cell
+              {
+                display: block;
+                text-align: center;
+                padding-bottom: $vertical-rythm;
+              }
+          }
+      }
+  }
