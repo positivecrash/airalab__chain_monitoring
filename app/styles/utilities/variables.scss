@@ -20,10 +20,13 @@ $c-text: $c-dark;
 $c-gray: #ccc;
 
 $c-gray-0: #282A2B;
+$c-gray-1: #444A4D;
+$c-gray-2: #747677;
+$c-gray-3: #C0C3C4;
 
 
 $font-size-basic: 16px;
-$font-size-title: 40px; //h1
+$font-size-title: 26px; //h1
 $font-family-base:  'Roboto', Arial, Helvetica, sans-serif;
 $font-family-second:  'a_AlbionicExpBold', Trebuchet MS, Arial, Helvetica, sans-serif;
 $vertical-rythm: $font-size-basic * 1.2;
@@ -36,3 +39,5 @@ $modernizr-cssanimations: '.cssanimations';
 
 $bootstrap-sm: 576px;
 $bootstrap-md: 768px;
+
+$rem-fallback: true;

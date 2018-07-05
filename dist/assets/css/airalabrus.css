@@ -34,7 +34,7 @@ input, select {
 }
 
 /*BOOTSTAP BREAKPOINTS*/
-.w-base, .w-text {
+.w-base, .w-text, .w-small {
   max-width: 1240px;
   padding-left: 20px;
   padding-right: 20px;
@@ -73,9 +73,36 @@ header[role='banner'] a, input[type='submit'], button, a.btn-red, input.btn-red,
   max-height: 100%;
 }
 
+h1, .header-nav li, input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 1px !important;
+}
+
 /* EXTENDS */
-.header-nav li, input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, body {
-  font-size: 16px;
+.header-nav li, input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, input:not([type='submit'])::-webkit-input-placeholder, input[type='submit']::-webkit-input-placeholder, button::-webkit-input-placeholder, a.btn-red::-webkit-input-placeholder, input.btn-red::-webkit-input-placeholder, button.btn-red::-webkit-input-placeholder, a.btn-blue::-webkit-input-placeholder, input.btn-blue::-webkit-input-placeholder, button.btn-blue::-webkit-input-placeholder, a.btn-green::-webkit-input-placeholder, input.btn-green::-webkit-input-placeholder, button.btn-green::-webkit-input-placeholder, body {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  word-spacing: normal;
+  letter-spacing: 0;
+}
+.header-nav li, input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, input:not([type='submit'])::-moz-placeholder, input[type='submit']::-moz-placeholder, button::-moz-placeholder, a.btn-red::-moz-placeholder, input.btn-red::-moz-placeholder, button.btn-red::-moz-placeholder, a.btn-blue::-moz-placeholder, input.btn-blue::-moz-placeholder, button.btn-blue::-moz-placeholder, a.btn-green::-moz-placeholder, input.btn-green::-moz-placeholder, button.btn-green::-moz-placeholder, body {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  word-spacing: normal;
+  letter-spacing: 0;
+}
+.header-nav li, input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, input:not([type='submit']):-ms-input-placeholder, input[type='submit']:-ms-input-placeholder, button:-ms-input-placeholder, a.btn-red:-ms-input-placeholder, input.btn-red:-ms-input-placeholder, button.btn-red:-ms-input-placeholder, a.btn-blue:-ms-input-placeholder, input.btn-blue:-ms-input-placeholder, button.btn-blue:-ms-input-placeholder, a.btn-green:-ms-input-placeholder, input.btn-green:-ms-input-placeholder, button.btn-green:-ms-input-placeholder, body {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  word-spacing: normal;
+  letter-spacing: 0;
+}
+.header-nav li, input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, input:not([type='submit'])::placeholder, input[type='submit']::placeholder, button::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder, a.btn-green::placeholder, input.btn-green::placeholder, button.btn-green::placeholder, body {
+  font-size: 1rem;
   line-height: 1.2;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   word-spacing: normal;
@@ -84,19 +111,19 @@ header[role='banner'] a, input[type='submit'], button, a.btn-red, input.btn-red,
 
 /* TEXT STYLES */
 h2 {
-  font-size: 32px;
+  font-size: 18px;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 14px;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 10px;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 6px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -109,7 +136,10 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 38.4px;
 }
 
 a {
@@ -198,11 +228,11 @@ li:last-child, p:last-child, blockquote:last-child {
     opacity: 0;
   }
 }
-.svg .sprite-basic-check, .svg .sprite-basic-hamburger, .svg .sprite-basic-hamburger-close, .svg .form-inline__ok:after {
+.svg .sprite-basic-check, .svg .sprite-basic-hamburger, .svg .sprite-basic-hamburger-close {
   background-image: url("../i/sprite.svg?9");
 }
 
-.sprite-basic-check, .sprite-basic-hamburger, .sprite-basic-hamburger-close, .form-inline__ok:after {
+.sprite-basic-check, .sprite-basic-hamburger, .sprite-basic-hamburger-close {
   background-image: url("../i/sprite.png?9");
 }
 
@@ -297,6 +327,7 @@ header[role='banner'] {
   color: #fff;
   position: relative;
   z-index: 10;
+  margin-bottom: 100px;
 }
 header[role='banner'] a {
   color: #fff;
@@ -321,9 +352,7 @@ header[role='banner'] a {
   display: inline-block;
   margin-left: 0;
   margin-bottom: 0;
-  text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 1px;
 }
 .header-nav li a {
   display: block;
@@ -363,6 +392,7 @@ header[role='banner'] a {
 
   .header-nav {
     opacity: 0;
+    visibility: hidden;
     position: absolute;
     right: 0;
     left: 0;
@@ -379,24 +409,24 @@ header[role='banner'] a {
   }
   .header-nav.active {
     opacity: 0;
+    visibility: visible;
     -webkit-animation: 0.3s fadeIn ease-in forwards;
             animation: 0.3s fadeIn ease-in forwards;
   }
 }
 footer[role='contentinfo'] {
-  background-color: #2C4C4B;
+  color: #747677;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 10;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+footer[role='contentinfo'] .w-base {
   padding: 20px 0;
-}
-footer[role='contentinfo'], footer[role='contentinfo'] a {
-  color: #fff;
-}
-footer[role='contentinfo'] .form-inline {
-  max-width: 457px;
+  border-top: 1px solid #747677;
 }
 @media screen and (max-width: 750px) {
   footer[role='contentinfo'] .footer-row .d-t_cell {
@@ -408,16 +438,36 @@ footer[role='contentinfo'] .form-inline {
 
 /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
 input:not([type='submit']), input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green {
-  background-color: #ccc;
-  border-radius: 20px;
-  border: 0;
+  font-size: 1.2rem;
+  background-color: #fff;
+  border: 1px solid #747677;
+  border-radius: 2px;
   box-sizing: border-box;
-  padding: 10px 20px;
-  margin-bottom: 13.44px;
+  padding: 16px 20px;
+  margin-bottom: 0.84rem;
 }
 input[disabled]:not([type='submit']), input[disabled][type='submit'], button[disabled], a[disabled].btn-red, input[disabled].btn-red, a[disabled].btn-blue, input[disabled].btn-blue, a[disabled].btn-green, input[disabled].btn-green {
   cursor: default;
   opacity: 0.8;
+}
+input:not([type='submit'])::-webkit-input-placeholder, input[type='submit']::-webkit-input-placeholder, button::-webkit-input-placeholder, a.btn-red::-webkit-input-placeholder, input.btn-red::-webkit-input-placeholder, button.btn-red::-webkit-input-placeholder, a.btn-blue::-webkit-input-placeholder, input.btn-blue::-webkit-input-placeholder, button.btn-blue::-webkit-input-placeholder, a.btn-green::-webkit-input-placeholder, input.btn-green::-webkit-input-placeholder, button.btn-green::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  color: #C0C3C4;
+}
+input:not([type='submit'])::-moz-placeholder, input[type='submit']::-moz-placeholder, button::-moz-placeholder, a.btn-red::-moz-placeholder, input.btn-red::-moz-placeholder, button.btn-red::-moz-placeholder, a.btn-blue::-moz-placeholder, input.btn-blue::-moz-placeholder, button.btn-blue::-moz-placeholder, a.btn-green::-moz-placeholder, input.btn-green::-moz-placeholder, button.btn-green::-moz-placeholder {
+  font-size: 1.2rem;
+  color: #C0C3C4;
+}
+input:not([type='submit']):-ms-input-placeholder, input[type='submit']:-ms-input-placeholder, button:-ms-input-placeholder, a.btn-red:-ms-input-placeholder, input.btn-red:-ms-input-placeholder, button.btn-red:-ms-input-placeholder, a.btn-blue:-ms-input-placeholder, input.btn-blue:-ms-input-placeholder, button.btn-blue:-ms-input-placeholder, a.btn-green:-ms-input-placeholder, input.btn-green:-ms-input-placeholder, button.btn-green:-ms-input-placeholder {
+  font-size: 1.2rem;
+  color: #C0C3C4;
+}
+input:not([type='submit'])::placeholder, input[type='submit']::placeholder, button::placeholder, a.btn-red::placeholder, input.btn-red::placeholder, button.btn-red::placeholder, a.btn-blue::placeholder, input.btn-blue::placeholder, button.btn-blue::placeholder, a.btn-green::placeholder, input.btn-green::placeholder, button.btn-green::placeholder {
+  font-size: 1.2rem;
+  color: #C0C3C4;
+}
+input.error:not([type='submit']), input.error[type='submit'], button.error, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, a.error.btn-green, input.error.btn-green {
+  border-color: #F15A24;
 }
 
 input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green {
@@ -429,7 +479,10 @@ input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-bl
   border: 0;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  border-radius: 20px;
+  border-radius: 32px;
+}
+input.error[type='submit'], button.error, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, a.error.btn-green, input.error.btn-green, input.error[type='submit']:hover, button.error:hover, a.error.btn-red:hover, input.error.btn-red:hover, a.error.btn-blue:hover, input.error.btn-blue:hover, a.error.btn-green:hover, input.error.btn-green:hover {
+  background-color: #F15A24;
 }
 
 /*======== INPUTS =========*/
@@ -439,14 +492,14 @@ input:not([type='submit']) {
 
 /*======== BUTTONS =========*/
 input[type='submit'], button {
-  background-color: #03A5ED;
+  background-color: #3C9E1A;
   color: #fff;
 }
 input[type='submit']:hover, button:hover {
-  background-color: #0393d4;
+  background-color: #348816;
 }
 input[type='submit'][disabled], button[disabled] {
-  background-color: #03A5ED;
+  background-color: #3C9E1A;
 }
 
 a.btn-red, input.btn-red, button.btn-red {
@@ -483,51 +536,62 @@ a.btn-green[disabled], input.btn-green[disabled], button.btn-green[disabled] {
 }
 
 /*======== OTHER =========*/
-@media screen and (min-width: 501px) {
-  .form-inline {
-    display: inline-block;
-    background-color: #ccc;
-    border-radius: 20px;
-  }
-  .form-inline input {
-    margin-bottom: 0;
-  }
-  .form-inline input[type="email"], .form-inline input[type="text"] {
-    float: left;
-    width: 50%;
-    background-color: transparent;
-    border: 0;
-  }
-  .form-inline input[type="submit"], .form-inline input[type="button"] {
-    float: right;
-    width: 50%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .form-inline input {
-    display: block;
-    max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.form-inline__ok {
+.form-message {
+  text-align: center;
+  padding: 0.625rem;
+  border-radius: 2px;
   position: relative;
 }
-.form-inline__ok:after {
+.form-message:before {
   content: "";
-  width: 28.36px;
-  height: 16.31px;
-  background-position: 0px 0px;
   position: absolute;
-  right: -40px;
-  top: 10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 16px solid transparent;
 }
-@media screen and (max-width: 500px) {
-  .form-inline__ok:after {
-    right: 0;
-  }
+.form-message.top:before, .form-message.bottom:before {
+  left: 50%;
+  margin-left: -5px;
+}
+.form-message.top:before {
+  top: -16px;
+}
+.form-message.bottom:before {
+  bottom: -15px;
+  left: 50%;
+  margin-left: -5px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.form-message.left:before, .form-message.right:before {
+  top: 50%;
+  margin-top: -8px;
+}
+.form-message.left:before {
+  left: -16px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.form-message.right:before {
+  right: -16px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.form-message.error {
+  background-color: #fdeae4;
+  color: #d4420e;
+}
+.form-message.error.top:before, .form-message.error.bottom:before, .form-message.error.left:before, .form-message.error.right:before {
+  border-bottom-color: #fdeae4;
+}
+.form-message.success {
+  background-color: #cff5c2;
+  color: #2b7213;
+}
+.form-message.success.top:before, .form-message.success.bottom:before, .form-message.success.left:before, .form-message.success.right:before {
+  border-bottom-color: #cff5c2;
 }
 
 .page-index {
@@ -586,7 +650,7 @@ a.btn-green[disabled], input.btn-green[disabled], button.btn-green[disabled] {
 @media (max-width: 860px) {
   .page-index h1 {
     margin-top: 50px;
-    font-size: 28px;
+    font-size: 18.2px;
   }
   .page-index .w-text {
     max-width: 90%;
@@ -3085,6 +3149,11 @@ html {
   position: relative;
   font-size: 100%;
 }
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 80%;
+  }
+}
 
 body {
   background-color: #fff;
@@ -3103,6 +3172,10 @@ body {
 /* DISPLAY */
 .w-text {
   max-width: 740px;
+}
+
+.w-small {
+  max-width: 372px;
 }
 
 .w-paddings {
@@ -3149,27 +3222,8 @@ body {
 }
 
 section {
-  margin-top: 76.8px;
-  margin-bottom: 76.8px;
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
 }
 
 /* END OF DISPLAY */
-/* MEDIA INSERT */
-.media-embed_video iframe, .media-embed_video object, .media-embed_video embed {
-  border: 0;
-}
-.media-embed_video.responsive-true {
-  position: relative;
-  padding-bottom: 56.2%;
-  height: 0;
-  overflow: hidden;
-}
-.media-embed_video.responsive-true iframe, .media-embed_video.responsive-true object, .media-embed_video.responsive-true embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* end of MEDIA INSERT */

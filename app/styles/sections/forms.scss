@@ -1,37 +1,52 @@
 /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
-$btn-padding-v: 10px;
+$btn-padding-v: 16px;
 $inp-padding-v: $btn-padding-v;
 $inp-padding-g: 20px;
 
-$inp-margin-b: $vertical-rythm * 0.7;
+$inp-margin-b: rem($vertical-rythm * 0.7);
 
-$color-input-background: $c-gray;
+$color-input-background: #fff;
+$color-input-border: $c-gray-2;
 $color-disabled-button-background: darken($c-gray, 5%);
+
+$fontsize-input: rem($font-size-basic * 1.2);
 
 %form_e_base{
 	@extend %inline-block;
 
 	@extend %font_base;
+	font-size: $fontsize-input;
 	background-color: $color-input-background;
-
-  	border-radius: 2 * $inp-padding-v;
-  	border: 0;
+  	border: 1px solid $color-input-border;
+  	border-radius: 2px;
 
   	box-sizing: border-box;
   	padding: $inp-padding-v $inp-padding-g;
   	margin-bottom: $inp-margin-b;
 
   	&[disabled]{
-	    // background-color: lighten($color-input-background, 5%);
 	    cursor: default;
 	    opacity: 0.8;
   	}
+
+  	&::placeholder
+	  	{
+	  		@extend %font_base;
+	  		font-size: $fontsize-input;
+	  		color: $c-gray-3;
+	  	}
+
+	&.error
+		{
+			border-color: $c-red;
+		}
 }
 
 %form_b_base{
 	text-align: center;
 	@extend %link_noline;
 	font-weight: 700;
+	@extend %text_uppercase;
 
   	appearance: none;
   	border: 0;
@@ -39,6 +54,11 @@ $color-disabled-button-background: darken($c-gray, 5%);
   	transition: all 0.2s ease-in-out;
 
   	border-radius: 2 * $btn-padding-v;
+
+  	&.error
+		{
+			&, &:hover { background-color: $c-red; }
+		}
 }
 
 @mixin btn_col($back, $text: #fff){
@@ -73,7 +93,7 @@ input[type='submit'], button{
 
 	@extend %form_e_base;
 	@extend %form_b_base;
-	@include btn_col($c-blue);
+	@include btn_col($c-green);
 }
 
 a.btn-red, input.btn-red, button.btn-red{
@@ -103,56 +123,84 @@ a.btn-green, input.btn-green, button.btn-green{
 
 /*======== OTHER =========*/
 
-.form-inline
+.form-message
 	{
-
-	  	@include minMobile(){
-	  		display: inline-block;
-		  	background-color: $color-input-background;
-		  	border-radius: 20px;  //радиус считается (высота_строки кнопки + 2 * padding_по_вертикали + px_box_shadow_вертикальный)/2
-
-		  	input{
-		  		margin-bottom: 0;
-		  	}
-
-		  	input[type="email"], input[type="text"]{
-		    	float: left;
-		    	width: 50%;
-		    	background-color: transparent;
-		    	border: 0;
-		  	}
-
-		  	input[type="submit"], input[type="button"]{
-		    	float: right;
-		    	width: 50%;
-		  	}
-	  	}
-
-	  	@include mobile(){
-	  		input {
-	  			display: block;
-	  			max-width: 200px;
-	  			margin-left: auto;
-	  			margin-right: auto;
-	  		}
-	  	}
-	}
-
-
-.form-inline__ok
-	{
+		text-align: center;
+		padding: rem(10px);
+		border-radius: 2px;
 		position: relative;
 
-		&:after{
-			content: "";
-			@include get-sprite('check');
+		$pointer_w: 10px;
+		$pointer_h: 16px;
 
-			position: absolute;
-			right: -40px;
-			top: 10px;
-
-			@include mobile(){
-				right: 0;
+		&:before
+			{
+				content: "";
+				position: absolute;
+				width: 0;
+				height: 0;
+				border-left: $pointer_w solid transparent;
+				border-right: $pointer_w solid transparent;
+				border-bottom: $pointer_h solid transparent;
 			}
-		}
+
+		&.top:before, &.bottom:before
+			{
+				left: 50%;
+				margin-left: - $pointer_w/2;
+			}
+
+		&.top:before
+			{
+				top: - $pointer_h;
+			}
+
+		&.bottom:before
+			{
+				bottom: -15px;
+				left: 50%;
+				margin-left: - $pointer_w/2;
+				transform: rotate(180deg);
+			}
+
+		&.left:before, &.right:before
+			{
+				top: 50%;
+				margin-top: - $pointer_h/2;
+			}
+
+		&.left:before
+			{
+				left: - $pointer_h;
+				transform: rotate(-90deg);
+			}
+
+		&.right:before
+			{
+				right: - $pointer_h;
+				transform: rotate(90deg);
+			}
+
+
+		&.error
+			{
+				background-color: lighten($c-red, 40%);
+				color: darken($c-red, 10%);
+
+				&.top:before, &.bottom:before, &.left:before, &.right:before
+					{
+						border-bottom-color: lighten($c-red, 40%);
+					}
+			}
+
+		&.success
+			{
+				background-color: lighten($c-green, 50%);
+				color: darken($c-green, 10%);
+
+				&.top:before, &.bottom:before, &.left:before, &.right:before
+					{
+						border-bottom-color: lighten($c-green, 50%);
+					}
+			}
 	}

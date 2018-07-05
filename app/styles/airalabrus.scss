@@ -4,6 +4,7 @@
 
 @import "utilities/my_reset";
 @import "utilities/media";
+@import "utilities/rem";
 @import "utilities/variables";
 
 @import "utilities/extends";
@@ -37,7 +38,12 @@ html, body
 html
   {
     position: relative;
+
     font-size: 100%;
+
+    @include mobile(){
+      font-size: 80%;
+    }
   }
 
 body
@@ -81,6 +87,12 @@ body
     max-width: $width-text - $padding-base-side * 2;
   }
 
+.w-small
+  {
+    @extend %width_base;
+    max-width: 412px - $padding-base-side * 2;
+  }
+
 .w-paddings
   {
     padding-left: $padding-base-side;
@@ -111,39 +123,8 @@ body
 
 section
   {
-    margin-top: $vertical-rythm*4;
-    margin-bottom: $vertical-rythm*4;
+    margin-top: rem($vertical-rythm * 4);
+    margin-bottom: rem($vertical-rythm * 4);
   }
 
 /* END OF DISPLAY */
-
-
-
-
-
-/* MEDIA INSERT */
-
-
-.media-embed_video{
-  iframe, object, embed{
-    border: 0;
-  }
-
-  &.responsive-true{
-    position: relative;
-    // padding-bottom: 52%;
-    padding-bottom: 56.2%;
-    height: 0;
-    overflow: hidden;
-
-    iframe, object , embed{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-
-/* end of MEDIA INSERT */

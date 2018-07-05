@@ -1,7 +1,6 @@
 footer[role='contentinfo']
   {
-    background-color: $c-dark-green;
-    &, a { color: #fff; }
+    color: $c-gray-2;
 
     position: absolute;
     bottom: 0;
@@ -9,13 +8,15 @@ footer[role='contentinfo']
     right: 0;
     z-index: 10;
 
-    padding: 20px 0;
+    padding-left: $padding-base-side;
+    padding-right: $padding-base-side;
 
+   .w-base
+    {
+      padding: 20px 0;
+      border-top: 1px solid $c-gray-2;
+    }
 
-    .form-inline
-      {
-        max-width: 457px;
-      }
 
      @include maxTablet()
       {

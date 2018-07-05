@@ -1,7 +1,8 @@
 /* EXTENDS */
+
 %font_base
 	{
-		font-size: $font-size-basic;
+		font-size: rem($font-size-basic);
 		line-height: 1.2;
 		font-family: $font-family-base;
 		word-spacing: normal;
@@ -36,7 +37,12 @@
 
 h1
 	{
-		font-size: $font-size-title;
+		font-size: rem($font-size-title);
+		@extend %text_uppercase;
+        font-weight: 700;
+        line-height: 1.5;
+
+        margin-bottom: $vertical-rythm * 2;
 	}
 
 

@@ -1,0 +1,15 @@
+extends extends/layout.pug
+
+block head
+	- var pageTitle = 'Airalab Rus Monitoring – log in'
+
+block content
+	.w-text
+		h1 Вход в панель управления контроля качества для персонала
+
+		section
+			.w-small
+				form
+					p: input.w-full(type="text", value="", placeholder="Введите ваш логин")
+					p: input.w-full(type="password", value="", placeholder="Пароль")
+					p: input.w-full(type="submit", value="Вход")
