@@ -1,0 +1,12 @@
+mixin product_prop(title, value, status)
+	.product__prop
+		.product__prop_title= title
+
+		if status && status == 'valid'
+			.product__prop_value.valid= value
+
+		else if status && status == 'invalid'
+			.product__prop_value.invalid= value
+
+		else
+			.product__prop_value= value

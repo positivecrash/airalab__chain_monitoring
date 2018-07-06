@@ -38,7 +38,12 @@ $modernizr-svg: '.svg';
 $modernizr-cssanimations: '.cssanimations';
 
 
-$bootstrap-sm: 576px;
-$bootstrap-md: 768px;
+// $bootstrap-sm: 576px;
+// $bootstrap-md: 768px;
+
+$grid-breakpoints: (
+  sm: 320px,
+  md: 650px
+);
 
 $rem-fallback: true;

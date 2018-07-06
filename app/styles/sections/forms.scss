@@ -1,5 +1,5 @@
 /*======== FORMS VARIABLES & MIXINS & EXTENDS =========*/
-$btn-padding-v: 16px;
+$btn-padding-v: 10px;
 $inp-padding-v: $btn-padding-v;
 $inp-padding-g: 20px;
 
@@ -9,7 +9,7 @@ $color-input-background: #fff;
 $color-input-border: $c-gray-2;
 $color-disabled-button-background: darken($c-gray, 5%);
 
-$fontsize-input: rem($font-size-basic * 1.2);
+$fontsize-input: rem($font-size-basic);
 
 %form_e_base{
 	@extend %inline-block;

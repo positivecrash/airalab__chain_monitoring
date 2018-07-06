@@ -2,8 +2,12 @@ header(role='banner')
 	.w-base
 		.d-t.w-full
 			.d-t_cell.align-v-m
-				a#header-logo(href="index.html")
-					img(src='assets/i/logo-airalabrus-monitoring.png', srcset='assets/i/logo-airalabrus-monitoring@2x.png')
+				if authorised === true
+					a#header-logo(href="index.html")
+						img(src='assets/i/logo-airalabrus-monitoring.png', srcset='assets/i/logo-airalabrus-monitoring@2x.png')
+				else
+					span#header-logo
+						img(src='assets/i/logo-airalabrus-monitoring.png', srcset='assets/i/logo-airalabrus-monitoring@2x.png')
 
 			.d-t_cell.align-v-m.t-align-right
 

@@ -3,7 +3,7 @@
 %font_base
 	{
 		font-size: rem($font-size-basic);
-		line-height: 1.2;
+		line-height: 1.5;
 		font-family: $font-family-base;
 		word-spacing: normal;
 		letter-spacing: 0;
@@ -28,6 +28,7 @@
 		margin-bottom: $vertical-rythm;
 		@extend %text_uppercase;
 		text-align: center;
+		line-height: 1.2;
 
 	  	&:first-child
 		  	{
@@ -87,6 +88,8 @@ li, p, blockquote
 .t-align-center { text-align: center; text-align: center!important; }
 .t-align-right { text-align: right; }
 .t-align-left { text-align: left; }
+
+.t-size-small { font-size: rem(12px); }
 
 
 
@@ -155,7 +158,13 @@ table
 	}
 
 
-
+img.i-block
+	{
+		display: block;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 
 // .t-paragraph-hyphened {

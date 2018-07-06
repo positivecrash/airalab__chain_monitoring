@@ -1,0 +1,38 @@
+extends extends/layout.pug
+include includes/mixins.pug
+
+block html
+	- var meta_title = 'Торт "Медовый" - Airalab Rus Monitoring'
+	- var authorised = false
+
+	
+block content
+	main(role="main")
+		.w-base
+			h1 Торт «медовый»
+
+			.row
+				.col-md-3
+					p: img.i-block(alt="", src="assets/i/tmp/FC-cake-medovyi.jpg")
+					p.t-size-small Неизменяемость данных, указанных на этой странице о продукте, гарантирована записью в независимой децентрализованной базе блокчейн
+					p: a.btn-green.w-full(href="#", target="_blank") Проверить запись
+				.col-md-3
+					+product_prop('Производитель:', 'Фабрика Качества')
+					+product_prop('Описание:', 'Вкус знакомый с детства продолжает радовать и сейчас. Спасибо, трудолюбивым пчелам, которые собрали самый вкусный мед для торта')
+					+product_prop('Артикул:', '120329023343443')
+				.col-md-3
+					+product_prop('Дата изготовления:', '03.07.2018', 'valid')
+					+product_prop('Срок годности:', '5 дней от даты изготовления', 'valid')
+				.col-md-3
+					.product__prop_group.accordion
+						.accordion__tab.valid Пункт траспортировки 1
+						.accordion__content
+							+product_prop('Информация о пункте:', '12394, г. Тольятти ул. Индустриальная 4, оф. 102, тел: 65-12-75')
+							+product_prop('Время прибытия:', '03.07.2018 - 08:45')
+							+product_prop('Диапазон температур:', '0℃ … +4 ℃','valid')
+
+						.accordion__tab.valid Пункт траспортировки 2
+						.accordion__content
+							+product_prop('Информация о пункте:', '12394, г. Тольятти ул. Индустриальная 4, оф. 102, тел: 65-12-75')
+							+product_prop('Время прибытия:', '03.07.2018 - 08:45')
+							+product_prop('Диапазон температур:', '0℃ … +4 ℃','valid')
