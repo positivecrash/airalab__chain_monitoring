@@ -191,10 +191,38 @@ input[type=checkbox], input[type=radio]
 
 					&:after
 						{
-							background-image: inline-image('tick.svg');
+							background-image: inline-image('input-checkbox.svg');
 						}
 				}
 
+			}
+	}
+
+
+input[type=radio]
+	{
+		& + label
+			{
+				&:before
+					{
+						border-radius: rem(24px);
+					}
+
+				&:after
+					{
+						background-size: 60%;
+					}
+			}
+
+		&:checked
+			{
+				& + label
+					{
+						&:after
+							{
+								background-image: inline-image('input-radio.svg');
+							}
+					}
 			}
 	}
 
