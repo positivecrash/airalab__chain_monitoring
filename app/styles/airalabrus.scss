@@ -125,6 +125,12 @@ section
   {
     margin-top: rem($vertical-rythm * 4);
     margin-bottom: rem($vertical-rythm * 4);
+
+    &.section__lightgray
+      {
+        background-color: $c-gray-4;
+        padding: rem(20px);
+      }
   }
 
 /* END OF DISPLAY */

@@ -17,7 +17,7 @@
 @for $i from 2 through 5
 	{
 	  h#{$i}{
-	    font-size: $font-size-title - 4 * $i;
+	    font-size: $font-size-title - 3 * $i;
 	  }
 	}
 
@@ -26,7 +26,7 @@
 	{
 		margin-top: $vertical-rythm*2;
 		margin-bottom: $vertical-rythm;
-		text-align: center;
+		@extend %text_uppercase;
 
 	  	&:first-child
 		  	{

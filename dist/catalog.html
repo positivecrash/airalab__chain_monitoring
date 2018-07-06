@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Авторизация - Airalab Rus Monitoring | airalab.org</title>
+    <title>Каталог - Airalab Rus Monitoring | airalab.org</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;amp;subset=cyrillic,cyrillic-ext" type="text/css" media="all">
@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
   </head>
-  <body>
+  <body class="logged">
     <header role="banner">
       <div class="w-base">
         <div class="d-t w-full">
@@ -24,7 +24,7 @@
             <ul class="header-nav">
               <li><a href="#">О проекте</a></li>
               <li><a href="#">Поддержка</a></li>
-              <li class="current-menu-item"><a href="#">Вход для персонала</a>
+              <li><a href="#">admin / выйти</a>
               </li>
             </ul>
           </div>
@@ -32,23 +32,15 @@
       </div>
     </header>
     <div class="w-text">
-      <h1>Вход в панель управления контроля качества для персонала</h1>
+      <h1>Все отслеживаемые по меткам продукты</h1>
+      <section class="section__lightgray">
+        <h3>Фильтр</h3>
+        <p class="form__label-line">
+          <input type="checkbox" id="checkbox_1">
+          <label for="checkbox_1">Показать только продукты с нарушением</label>
+        </p>
+      </section>
     </div>
-    <section>
-      <div class="w-small">
-        <form>
-          <p>
-            <input class="w-full" type="text" value="" placeholder="Введите ваш логин">
-          </p>
-          <p>
-            <input class="w-full" type="password" value="" placeholder="Пароль">
-          </p>
-          <p>
-            <input class="w-full" type="submit" value="Вход">
-          </p>
-        </form>
-      </div>
-    </section>
     <footer role="contentinfo">
       <div class="w-base">
         <div class="footer-row d-t w-full">

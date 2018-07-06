@@ -1,18 +1,18 @@
 extends extends/layout.pug
 
-//- block html
-//- 	- var bodyclass = 'logged'
+block html
+	- var meta_title = 'Авторизация - Airalab Rus Monitoring'
+	- var nav = '3'
+	- var authorised = false
 
-block head
-	- var pageTitle = 'Airalab Rus Monitoring – log in'
-
+	
 block content
 	.w-text
 		h1 Вход в панель управления контроля качества для персонала
 
-		section
-			.w-small
-				form
-					p: input.w-full(type="text", value="", placeholder="Введите ваш логин")
-					p: input.w-full(type="password", value="", placeholder="Пароль")
-					p: input.w-full(type="submit", value="Вход")
+	section
+		.w-small
+			form
+				p: input.w-full(type="text", value="", placeholder="Введите ваш логин")
+				p: input.w-full(type="password", value="", placeholder="Пароль")
+				p: input.w-full(type="submit", value="Вход")

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.04 7.644">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3c9e1a;
+      }
+    </style>
+  </defs>
+  <g id="double-tick-indicator" transform="translate(-2.664 0)">
+    <g id="done-all" transform="translate(2.664)">
+      <path id="Path_450" data-name="Path 450" class="cls-1" d="M11.848,126.225l-5.99,6.047-2.4-2.4-.8.8,3.194,3.194,6.845-6.845Z" transform="translate(-2.664 -126.225)"/>
+    </g>
+  </g>
+</svg>

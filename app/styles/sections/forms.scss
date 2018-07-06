@@ -22,7 +22,6 @@ $fontsize-input: rem($font-size-basic * 1.2);
 
   	box-sizing: border-box;
   	padding: $inp-padding-v $inp-padding-g;
-  	margin-bottom: $inp-margin-b;
 
   	&[disabled]{
 	    cursor: default;
@@ -117,6 +116,87 @@ a.btn-green, input.btn-green, button.btn-green{
 	@include btn_col($c-green);
 }
 
+
+
+/*======== CUSTOM CHECKS =========*/
+// .form__label-line
+// 	{
+// 		white-space: nowrap;
+
+// 		input[type=checkbox], input[type=radio], label
+// 			{
+// 				display: inline-block;
+// 				vertical-align: middle;
+// 			}
+
+// 		input[type=checkbox], input[type=radio]
+// 			{
+// 				margin-right: 10px;
+// 			}
+
+// 		label
+// 			{
+// 				white-space: normal;
+// 			}
+// 	}
+
+
+input[type=checkbox], input[type=radio]
+	{
+		display: none;
+
+		& + label
+			{
+				user-select: none;
+				cursor: pointer;
+				position: relative;
+				padding-left: rem(34px);
+
+				&:before, &:after
+					{
+						content:"";
+						position: absolute;
+						left: 0;
+						top: 50%;
+
+						width: rem(24px);
+						height: rem(24px);
+						margin-top: - rem(24px)/2 ;
+					}
+
+				&:before
+					{
+
+						border: 1px solid $c-gray-2;
+						
+					}
+
+				&:after
+					{
+						background-size: 80%;
+						background-repeat: no-repeat;
+						background-position: 50% 50%;
+					}
+			}
+
+		&:checked
+			{
+				& + label
+				{
+					&:before
+					{
+						background-color: #fff;
+						border-color: $c-gray-1;
+					}
+
+					&:after
+						{
+							background-image: inline-image('tick.svg');
+						}
+				}
+
+			}
+	}
 
 
 

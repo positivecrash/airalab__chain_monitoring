@@ -1,16 +1,19 @@
 extends extends/layout.pug
 
-block head
-	- var pageTitle = 'Airalab Rus Monitoring – log in'
+block html
+	- var meta_title = 'Авторизация - Airalab Rus Monitoring'
+	- var nav = '3'
+	- var authorised = false
+	
 
 block content
 	.w-text
 		h1 Вход в панель управления контроля качества для персонала
 
-		section
-			.w-small
-				form
-					p: input.w-full.error(type="text", value="fgbgg", placeholder="Введите ваш логин")
-					p: input.w-full(type="password", value="", placeholder="Пароль")
-					p: input.w-full.error(type="submit", value="Вход")
-					p.form-message.error.top Ошибка: Такого пользователя не существует
+	section
+		.w-small
+			form
+				p: input.w-full.error(type="text", value="fgbgg", placeholder="Введите ваш логин")
+				p: input.w-full(type="password", value="", placeholder="Пароль")
+				p: input.w-full.error(type="submit", value="Вход")
+				p.form-message.error.top Ошибка: Такого пользователя не существует

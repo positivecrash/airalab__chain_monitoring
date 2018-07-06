@@ -12,6 +12,10 @@ header(role='banner')
 					span.sprite-basic-hamburger-close
 
 				ul.header-nav
-					li.current-menu-item: a(href="#") Вход для персонала
-					li: a(href="#") О проекте
-					li: a(href="#") Поддержка
+					li(class= nav == "1" ? "current-menu-item" : ""): a(href="#") О проекте
+					li(class= nav == "2" ? "current-menu-item" : ""): a(href="#") Поддержка
+					li(class= nav == "3" ? "current-menu-item" : "")
+						if authorised === true
+							a(href="#") admin / выйти
+						else
+							a(href="#") Вход для персонала
