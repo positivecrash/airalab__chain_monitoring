@@ -297,12 +297,12 @@ input[type=radio]
 
 		&.error
 			{
-				background-color: lighten($c-red, 40%);
+				background-color: lighten($c-red, 45%);
 				color: darken($c-red, 10%);
 
 				&.top:before, &.bottom:before, &.left:before, &.right:before
 					{
-						border-bottom-color: lighten($c-red, 40%);
+						border-bottom-color: lighten($c-red, 45%);
 					}
 			}
 

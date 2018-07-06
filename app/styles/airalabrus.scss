@@ -29,21 +29,11 @@
 @import "plugins/overwrite";
 
 
-html, body
-  {
-    height: 100%;
-    min-height: 100%;
-  }
-
 html
   {
     position: relative;
-
-    font-size: 100%;
-
-    @include mobile(){
-      font-size: 80%;
-    }
+    height: auto;
+    min-height: 100%;
   }
 
 body
@@ -51,8 +41,24 @@ body
     @extend %font_base;
 
     background-color: #fff;
-    position: relative;
     color: $c-text;
+
+    font-size: 100%;
+
+    @include mobile(){
+      font-size: 80%;
+    }
+
+  }
+
+main[role="main"]
+  {
+      padding-top: 160px;
+      padding-bottom: 160px;
+
+      @include mobile(){
+        padding-bottom: 180px;
+      }
   }
 
 

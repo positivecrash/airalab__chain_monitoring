@@ -2,11 +2,14 @@
 
 header[role='banner']
   {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
     background-color: $c-blue;
     color: #fff;
-    position: relative;
-    z-index: 10;
-    margin-bottom: 100px;
 
     a
       {

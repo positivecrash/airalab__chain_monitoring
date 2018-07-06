@@ -6,76 +6,77 @@ block html
 	
 
 block content
-	.w-text
-		h1 Все отслеживаемые по меткам продукты
+	main(role="main")
+		.w-text
+			h1 Все отслеживаемые по меткам продукты
 
-		section.section__lightgray
-			h3 Фильтр
+			section.section__lightgray
+				h3 Фильтр
 
-			p.form__label-line
-				input(type="checkbox", id="checkbox_1")
-				label(for="checkbox_1") Показать только продукты с нарушением
-			p.form__label-line
-				input(type="checkbox", id="checkbox_2")
-				label(for="checkbox_2") Показать только не проданные продукты
+				p.form__label-line
+					input(type="checkbox", id="checkbox_1")
+					label(for="checkbox_1") Показать только продукты с нарушением
+				p.form__label-line
+					input(type="checkbox", id="checkbox_2")
+					label(for="checkbox_2") Показать только не проданные продукты
 
-		section
-			table.w-full
-				thead
-					tr
-						th Наименование
-						th ID
-						th Дата изготовления
-						th Статус
+			section
+				table.w-full
+					thead
+						tr
+							th Наименование
+							th ID
+							th Дата изготовления
+							th Статус
 
-				tbody
-					tr
-						td
-							a.catalog__item_title(href="#")
-								span.label__solid.label__solid_valid
-								span Торт «медовый»
-						td(data-th="ID") 40BBF8
-						td(data-th="Дата изготовления") 01.07.2018
-						td(data-th="Статус")
-							span.t-wrap-no в продаже
+					tbody
+						tr
+							td
+								a.catalog__item_title(href="#")
+									span.label__solid.label__solid_valid
+									span Торт «медовый»
+							td(data-th="ID") 40BBF8
+							td(data-th="Дата изготовления") 01.07.2018
+							td(data-th="Статус")
+								span.t-wrap-no в продаже
 
-					tr
-						td
-							a.catalog__item_title(href="#")
-								span.label__solid.label__solid_valid
-								span Торт «медовый»
-						td(data-th="ID") 40BBF4
-						td(data-th="Дата изготовления") 01.07.2018
-						td(data-th="Статус")
-							span.t-wrap-no в продаже
+						tr
+							td
+								a.catalog__item_title(href="#")
+									span.label__solid.label__solid_valid
+									span Торт «медовый»
+							td(data-th="ID") 40BBF4
+							td(data-th="Дата изготовления") 01.07.2018
+							td(data-th="Статус")
+								span.t-wrap-no в продаже
 
 
-					tr
-						td
-							a.catalog__item_title(href="#")
-								span.label__solid.label__solid_invalid
-								span Торт «медовый»
-						td(data-th="ID") 40BBF0
-						td(data-th="Дата изготовления") 01.07.2018
-						td(data-th="Статус")
-							span.t-wrap-no в продаже
+						tr
+							td
+								a.catalog__item_title(href="#")
+									span.label__solid.label__solid_invalid
+									span Торт «медовый»
+							td(data-th="ID") 40BBF0
+							td(data-th="Дата изготовления") 01.07.2018
+							td(data-th="Статус")
+								span.t-wrap-no в продаже
 
-					tr.catalog__item_na
-						td
-							a.catalog__item_title(href="#")
-								span.label__solid.label__solid_invalid
-								span Торт «медовый»
-						td(data-th="ID") 40BBG0
-						td(data-th="Дата изготовления") 27.06.2018
-						td(data-th="Статус")
-							span.t-wrap-no снят с продажи
+						tr.catalog__item_na
+							td
+								a.catalog__item_title(href="#")
+									span.label__solid.label__solid_invalid
+									span Торт «медовый»
+							td(data-th="ID") 40BBG0
+							td(data-th="Дата изготовления") 27.06.2018
+							td(data-th="Статус")
+								span.t-wrap-no снят с продажи
 
-					tr
-						td
-							a.catalog__item_title(href="#")
-								span.label__solid.label__solid_valid
-								span Торт «медовый»
-						td(data-th="ID") 30ABF4
-						td(data-th="Дата изготовления") 03.07.2018
-						td(data-th="Статус")
-							span.t-wrap-no в продаже
+						tr
+							td
+								a.catalog__item_title(href="#")
+									span.label__solid.label__solid_valid
+									span Торт «медовый»
+							td(data-th="ID") 30ABF4
+							td(data-th="Дата изготовления") 03.07.2018
+							td(data-th="Статус")
+								span.t-wrap-no в продаже

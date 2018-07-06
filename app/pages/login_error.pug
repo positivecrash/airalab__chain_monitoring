@@ -7,13 +7,14 @@ block html
 	
 
 block content
-	.w-text
-		h1 Вход в панель управления контроля качества для персонала
+	main(role="main")
+		.w-text
+			h1 Вход в панель управления контроля качества для персонала
 
-	section
-		.w-small
-			form
-				p: input.w-full.error(type="text", value="fgbgg", placeholder="Введите ваш логин")
-				p: input.w-full(type="password", value="", placeholder="Пароль")
-				p: input.w-full.error(type="submit", value="Вход")
-				p.form-message.error.top Ошибка: Такого пользователя не существует
+		section
+			.w-small
+				form
+					p: input.w-full.error(type="text", value="fgbgg", placeholder="Введите ваш логин")
+					p: input.w-full(type="password", value="", placeholder="Пароль")
+					p: input.w-full.error(type="submit", value="Вход")
+					p.form-message.error.top Ошибка: Такого пользователя не существует

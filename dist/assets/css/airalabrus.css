@@ -377,11 +377,13 @@ table tr:last-child {
 
 /*======== HEADER =========*/
 header[role='banner'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
   background-color: #03A5ED;
   color: #fff;
-  position: relative;
-  z-index: 10;
-  margin-bottom: 100px;
 }
 header[role='banner'] a {
   color: #fff;
@@ -706,11 +708,11 @@ input[type=radio]:checked + label:after {
           transform: rotate(90deg);
 }
 .form-message.error {
-  background-color: #f3c1c3;
+  background-color: #f7d7d8;
   color: #971e23;
 }
 .form-message.error.top:before, .form-message.error.bottom:before, .form-message.error.left:before, .form-message.error.right:before {
-  border-bottom-color: #f3c1c3;
+  border-bottom-color: #f7d7d8;
 }
 .form-message.success {
   background-color: #cff5c2;
@@ -3266,25 +3268,31 @@ li.fancybox-thumbs-loading {
 }
 
 /* end of BOOTSTRAP */
-html, body {
-  height: 100%;
-  min-height: 100%;
-}
-
 html {
   position: relative;
-  font-size: 100%;
-}
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 80%;
-  }
+  height: auto;
+  min-height: 100%;
 }
 
 body {
   background-color: #fff;
-  position: relative;
   color: #333;
+  font-size: 100%;
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 80%;
+  }
+}
+
+main[role="main"] {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+@media screen and (max-width: 600px) {
+  main[role="main"] {
+    padding-bottom: 180px;
+  }
 }
 
 /* FOR MODERN BROWSERS*/
