@@ -199,4 +199,53 @@ section
     td { opacity: 0.6; }
   }
 
+
+
+.catalog__paging
+  {
+    font-size: rem(20px);
+
+    input[type="number"]
+      {
+        width: rem(70px);
+        padding-left: rem(5px);
+        padding-right: rem(5px);
+        text-align: center;
+        margin-right: rem(14px);
+      }
+
+    span
+      {
+        color: $c-gray-2;
+      }
+  }
+
+.catalog__paging_control
+  {
+    display: inline-block;
+    width: rem(50px);
+    height: rem(50px);
+    background-color: $c-blue;
+    border-radius: rem(25px);
+    margin-left: rem(14px);
+    transition: 0.2s all ease;
+
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &:first-child
+      {
+        margin-left: 0;
+      }
+
+    &:hover
+      {
+        background-color: darken($c-blue, 5%);
+      }
+  }
+
+.catalog__paging_control_prev { background-image: inline-image('paging-prev.svg'); }
+.catalog__paging_control_next { background-image: inline-image('paging-next.svg'); }
+
 /* END OF PAGES */
