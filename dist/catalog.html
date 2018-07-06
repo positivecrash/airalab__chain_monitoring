@@ -40,9 +40,53 @@
           <label for="checkbox_1">Показать только продукты с нарушением</label>
         </p>
         <p class="form__label-line">
-          <input type="radio" id="checkbox_2">
+          <input type="checkbox" id="checkbox_2">
           <label for="checkbox_2">Показать только не проданные продукты</label>
         </p>
+      </section>
+      <section>
+        <table class="w-full">
+          <thead>
+            <tr>
+              <th>Наименование</th>
+              <th>ID</th>
+              <th>Дата изготовления</th>
+              <th>Статус</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="catalog__item_title" href="#"><span class="label__solid label__solid_valid"></span><span>Торт «медовый»</span></a></td>
+              <td data-th="ID">40BBF8</td>
+              <td data-th="Дата изготовления">01.07.2018</td>
+              <td data-th="Статус"><span class="t-wrap-no">в продаже</span></td>
+            </tr>
+            <tr>
+              <td><a class="catalog__item_title" href="#"><span class="label__solid label__solid_valid"></span><span>Торт «медовый»</span></a></td>
+              <td data-th="ID">40BBF4</td>
+              <td data-th="Дата изготовления">01.07.2018</td>
+              <td data-th="Статус"><span class="t-wrap-no">в продаже</span></td>
+            </tr>
+            <tr>
+              <td><a class="catalog__item_title" href="#"><span class="label__solid label__solid_invalid"></span><span>Торт «медовый»</span></a></td>
+              <td data-th="ID">40BBF0</td>
+              <td data-th="Дата изготовления">01.07.2018</td>
+              <td data-th="Статус"><span class="t-wrap-no">в продаже</span></td>
+            </tr>
+            <tr class="catalog__item_na">
+              <td><a class="catalog__item_title" href="#"><span class="label__solid label__solid_invalid"></span><span>Торт «медовый»</span></a></td>
+              <td data-th="ID">40BBG0</td>
+              <td data-th="Дата изготовления">27.06.2018</td>
+              <td data-th="Статус"><span class="t-wrap-no">снят с продажи</span></td>
+            </tr>
+            <tr>
+              <td><a class="catalog__item_title" href="#"><span class="label__solid label__solid_valid"></span><span>Торт «медовый»</span></a></td>
+              <td data-th="ID">30ABF4</td>
+              <td data-th="Дата изготовления">03.07.2018</td>
+              <td data-th="Статус"><span class="t-wrap-no">в продаже</span></td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </div>
     <footer role="contentinfo">

@@ -1,0 +1,4 @@
+@mixin rem_static
+	{
+		@include mobile() { font-size: 120%; }
+	}

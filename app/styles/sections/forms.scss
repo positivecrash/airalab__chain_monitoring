@@ -99,7 +99,7 @@ a.btn-red, input.btn-red, button.btn-red{
 	@extend %form_e_base;
 	@extend %form_b_base;
 
-	@include btn_col($c-red);
+	@include btn_col($c-orange);
 }
 
 a.btn-blue, input.btn-blue, button.btn-blue{
@@ -144,11 +144,14 @@ a.btn-green, input.btn-green, button.btn-green{
 input[type=checkbox], input[type=radio]
 	{
 		display: none;
+		@include rem_static();
 
 		& + label
 			{
+				@include rem_static();
 				user-select: none;
 				cursor: pointer;
+				display: inline-block;
 				position: relative;
 				padding-left: rem(34px);
 
@@ -161,7 +164,9 @@ input[type=checkbox], input[type=radio]
 
 						width: rem(24px);
 						height: rem(24px);
-						margin-top: - rem(24px)/2 ;
+						margin-top: - rem(24px)/2;
+
+						transition: all 0.8s ease;
 					}
 
 				&:before

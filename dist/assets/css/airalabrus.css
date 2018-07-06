@@ -73,7 +73,7 @@ header[role='banner'] a, input[type='submit'], button, a.btn-red, input.btn-red,
   max-height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, .header-nav li, input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green {
+h1, h2, h3, h4, h5, h6, .header-nav li, input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green, .catalog__item_title {
   text-transform: uppercase;
   letter-spacing: 1px;
   letter-spacing: 1px !important;
@@ -129,6 +129,7 @@ h5 {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 38.4px;
   margin-bottom: 19.2px;
+  text-align: center;
 }
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
   margin-top: 0;
@@ -165,8 +166,12 @@ li:last-child, p:last-child, blockquote:last-child {
   margin-bottom: 0;
 }
 
+.t-wrap-no {
+  white-space: nowrap;
+}
+
 .t-color-red {
-  color: #F15A24;
+  color: #C1272D;
 }
 
 .t-color-blue {
@@ -192,6 +197,56 @@ li:last-child, p:last-child, blockquote:last-child {
 
 .t-align-left {
   text-align: left;
+}
+
+/*TABLES*/
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 120%;
+  }
+}
+table td, table th {
+  padding: 0.875rem;
+}
+table th {
+  text-align: left;
+  border-bottom: 1px solid #747677;
+}
+@media screen and (max-width: 600px) {
+  table th {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  table td {
+    display: block;
+    padding: 0.625rem;
+  }
+  table td[data-th]:before {
+    content: attr(data-th) ":";
+    font-weight: 700;
+    margin-right: 0.875rem;
+  }
+}
+table tr {
+  border-bottom: 1px solid #C0C3C4;
+}
+@media screen and (max-width: 600px) {
+  table tr td:first-child {
+    padding-top: 1.5rem;
+  }
+  table tr td:last-child {
+    padding-bottom: 1.5rem;
+  }
+  table tr:first-child td:first-child {
+    padding-top: 0;
+  }
+  table tr:last-child td:last-child {
+    padding-bottom: 0;
+  }
+}
+table tr:last-child {
+  border-bottom: none;
 }
 
 @-webkit-keyframes fadeIn {
@@ -335,7 +390,7 @@ header[role='banner'] a {
 #header-logo {
   width: 212px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   #header-logo {
     width: 180px;
   }
@@ -478,7 +533,7 @@ input:not([type='submit'])::placeholder, input[type='submit']::placeholder, butt
   color: #C0C3C4;
 }
 input.error:not([type='submit']), input.error[type='submit'], button.error, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, a.error.btn-green, input.error.btn-green {
-  border-color: #F15A24;
+  border-color: #C1272D;
 }
 
 input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-blue, input.btn-blue, button.btn-blue, a.btn-green, input.btn-green, button.btn-green {
@@ -493,7 +548,7 @@ input[type='submit'], button, a.btn-red, input.btn-red, button.btn-red, a.btn-bl
   border-radius: 32px;
 }
 input.error[type='submit'], button.error, a.error.btn-red, input.error.btn-red, a.error.btn-blue, input.error.btn-blue, a.error.btn-green, input.error.btn-green, input.error[type='submit']:hover, button.error:hover, a.error.btn-red:hover, input.error.btn-red:hover, a.error.btn-blue:hover, input.error.btn-blue:hover, a.error.btn-green:hover, input.error.btn-green:hover {
-  background-color: #F15A24;
+  background-color: #C1272D;
 }
 
 /*======== INPUTS =========*/
@@ -550,14 +605,25 @@ a.btn-green[disabled], input.btn-green[disabled], button.btn-green[disabled] {
 input[type=checkbox], input[type=radio] {
   display: none;
 }
+@media screen and (max-width: 600px) {
+  input[type=checkbox], input[type=radio] {
+    font-size: 120%;
+  }
+}
 input[type=checkbox] + label, input[type=radio] + label {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  display: inline-block;
   position: relative;
   padding-left: 2.125rem;
+}
+@media screen and (max-width: 600px) {
+  input[type=checkbox] + label, input[type=radio] + label {
+    font-size: 120%;
+  }
 }
 input[type=checkbox] + label:before, input[type=checkbox] + label:after, input[type=radio] + label:before, input[type=radio] + label:after {
   content: "";
@@ -567,6 +633,7 @@ input[type=checkbox] + label:before, input[type=checkbox] + label:after, input[t
   width: 1.5rem;
   height: 1.5rem;
   margin-top: -0.75rem;
+  transition: all 0.8s ease;
 }
 input[type=checkbox] + label:before, input[type=radio] + label:before {
   border: 1px solid #747677;
@@ -639,11 +706,11 @@ input[type=radio]:checked + label:after {
           transform: rotate(90deg);
 }
 .form-message.error {
-  background-color: #fdeae4;
-  color: #d4420e;
+  background-color: #f3c1c3;
+  color: #971e23;
 }
 .form-message.error.top:before, .form-message.error.bottom:before, .form-message.error.left:before, .form-message.error.right:before {
-  border-bottom-color: #fdeae4;
+  border-bottom-color: #f3c1c3;
 }
 .form-message.success {
   background-color: #cff5c2;
@@ -3181,12 +3248,12 @@ li.fancybox-thumbs-loading {
   color: #fff;
 }
 .fancybox-close-small:hover {
-  background-color: #F15A24;
+  background-color: #C1272D;
   color: #fff;
 }
 
 .fancybox-button:hover {
-  background-color: #F15A24;
+  background-color: #C1272D;
 }
 
 /* BOOTSTRAP */
@@ -3208,7 +3275,7 @@ html {
   position: relative;
   font-size: 100%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   html {
     font-size: 80%;
   }
@@ -3284,9 +3351,50 @@ section {
   margin-top: 4.8rem;
   margin-bottom: 4.8rem;
 }
+section h1, section h2, section h3, section h4, section h5, section h6 {
+  text-align: left;
+}
 section.section__lightgray {
   background-color: #EFEFEF;
   padding: 1.25rem;
 }
 
 /* END OF DISPLAY */
+/* PAGES */
+.label__solid {
+  display: inline-block;
+  width: 2.125rem;
+  height: 2.125rem;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.label__solid_valid {
+  background-color: #3C9E1A;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNi44MjggOS42NzgiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJkb3VibGUtdGljay1pbmRpY2F0b3IiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiPgogICAgPGcgaWQ9ImRvbmUtYWxsIj4KICAgICAgPHBhdGggaWQ9IlBhdGhfNDUwIiBkYXRhLW5hbWU9IlBhdGggNDUwIiBjbGFzcz0iY2xzLTEiIGQ9Ik0xMi43MTIsMTI3LjIzNiwxMS43LDEyNi4yMjVsLTQuNTUsNC41NSwxLjAxMSwxLjAxMVptMy4wMzMtMS4wMTEtNy41ODQsNy42NTYtMy4wMzMtMy4wMzMtMS4wMTEsMS4wMTFMOC4xNjEsMTM1LjlsOC42NjctOC42NjdaTTAsMTMxLjg1OCw0LjA0NSwxMzUuOWwxLjAxMS0xLjAxMS00LjA0NS00LjA0NVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTEyNi4yMjUpIi8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K');
+}
+
+.label__solid_invalid {
+  background-color: #C1272D;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0LjY0OSAxNy40MzUiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJhdHRlbnRpb24tZXhjbGFtYXRpb24tdHJpYW5ndWxhci1zaWduYWwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00NTMgLTI1NikiPgogICAgPGcgaWQ9IkF0dGVudGlvbiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDUzIDI1NikiPgogICAgICA8ZyBpZD0iR3JvdXBfNDM2OSIgZGF0YS1uYW1lPSJHcm91cCA0MzY5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwKSI+CiAgICAgICAgPHBhdGggaWQ9IlBhdGhfMTcxNCIgZGF0YS1uYW1lPSJQYXRoIDE3MTQiIGNsYXNzPSJjbHMtMSIgZD0iTTI3NC4zMjUsMjMzLjc4NWEyLjMyNSwyLjMyNSwwLDEsMCwyLjMyNSwyLjMyNUEyLjMyNSwyLjMyNSwwLDAsMCwyNzQuMzI1LDIzMy43ODVaTTI3MiwyMjMuMzI1YTIuNDA2LDIuNDA2LDAsMCwwLC4wMzMuMzkxbDEuMTQ1LDYuNzc5YTEuMTYzLDEuMTYzLDAsMCwwLDIuMjkzLDBsMS4xNDUtNi43NzlhMi4yODEsMi4yODEsMCwwLDAsLjAzNC0uMzksMi4zMjUsMi4zMjUsMCwxLDAtNC42NDksMFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNzIgLTIyMSkiLz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==');
+  background-size: 20%;
+}
+
+.catalog__item_title {
+  font-weight: 500;
+  white-space: nowrap;
+}
+.catalog__item_title span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.catalog__item_title .label__solid {
+  margin-right: 0.625rem;
+}
+
+.catalog__item_na td {
+  opacity: 0.6;
+}
+
+/* END OF PAGES */
