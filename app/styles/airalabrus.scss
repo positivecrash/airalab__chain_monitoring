@@ -154,18 +154,25 @@ section
       background-position: 50% 50%;
     }
 
-.label__solid_valid
-    {
-      background-color: $c-green;
-      background-image: inline-image('label-valid-white.svg');
-    }
-
-.label__solid_invalid
+.catalog__item_valid
   {
-    background-color: $c-red;
-    background-image: inline-image('label-invalid-white.svg');
-    background-size: 20%;
+    .label__solid
+      {
+        background-color: $c-green;
+        background-image: inline-image('label-valid-white.svg');
+      }
   }
+
+.catalog__item_invalid
+  {
+    .label__solid
+      {
+        background-color: $c-red;
+        background-image: inline-image('label-invalid-white.svg');
+        background-size: 20%;
+      }
+  }
+
 
 .catalog__item_title
   {
@@ -255,18 +262,14 @@ section
       {
         position: relative;
 
-        .product__label
+        .label__solid
           {
             position: absolute;
             top: 0;
             right: 15px;
-            display: block;
             width: rem(54px);
             height: rem(54px);
-
             background-size: 50%;
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
 
             @media screen and (max-width: $bootstrap-md){
               right: 0;
@@ -383,7 +386,7 @@ section
 
     &.valid
       {
-        .product__label
+        .label__solid
           {
             background-color: $c-green;
             background-image: inline-image('label-valid-white.svg');
@@ -394,7 +397,7 @@ section
 
     &.invalid
       {
-        .product__label
+        .label__solid
           {
             background-color: $c-red;
             background-image: inline-image('label-invalid-white.svg');

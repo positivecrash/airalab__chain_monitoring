@@ -30,20 +30,20 @@ block content
 							th Статус
 
 					tbody
-						tr
+						tr.catalog__item_valid
 							td
 								a.catalog__item_title(href="#")
-									span.label__solid.label__solid_valid
+									span.label__solid
 									span Торт «медовый»
 							td(data-th="ID") 40BBF8
 							td(data-th="Дата изготовления") 01.07.2018
 							td(data-th="Статус")
 								span.t-wrap-no в продаже
 
-						tr
+						tr.catalog__item_valid
 							td
 								a.catalog__item_title(href="#")
-									span.label__solid.label__solid_valid
+									span.label__solid
 									span Торт «медовый»
 							td(data-th="ID") 40BBF4
 							td(data-th="Дата изготовления") 01.07.2018
@@ -51,35 +51,45 @@ block content
 								span.t-wrap-no в продаже
 
 
-						tr
+						tr.catalog__item_invalid
 							td
 								a.catalog__item_title(href="#")
-									span.label__solid.label__solid_invalid
+									span.label__solid
 									span Торт «медовый»
 							td(data-th="ID") 40BBF0
 							td(data-th="Дата изготовления") 01.07.2018
 							td(data-th="Статус")
 								span.t-wrap-no в продаже
 
-						tr.catalog__item_na
+						tr.catalog__item_na.catalog__item_invalid
 							td
 								a.catalog__item_title(href="#")
-									span.label__solid.label__solid_invalid
+									span.label__solid
 									span Торт «медовый»
 							td(data-th="ID") 40BBG0
 							td(data-th="Дата изготовления") 27.06.2018
 							td(data-th="Статус")
 								span.t-wrap-no снят с продажи
 
-						tr
+						tr.catalog__item_valid
 							td
 								a.catalog__item_title(href="#")
-									span.label__solid.label__solid_valid
+									span.label__solid
 									span Торт «медовый»
 							td(data-th="ID") 30ABF4
 							td(data-th="Дата изготовления") 03.07.2018
 							td(data-th="Статус")
 								span.t-wrap-no в продаже
+
+						tr.catalog__item_na.catalog__item_valid
+							td
+								a.catalog__item_title(href="#")
+									span.label__solid
+									span Торт «медовый»
+							td(data-th="ID") 40BBG0
+							td(data-th="Дата изготовления") 25.06.2018
+							td(data-th="Статус")
+								span.t-wrap-no продан
 
 			section.catalog__paging
 				.d-t.w-full
