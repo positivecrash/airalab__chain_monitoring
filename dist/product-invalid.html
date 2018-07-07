@@ -16,17 +16,17 @@
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
   </head>
-  <body>
+  <body class="logged">
     <header role="banner">
       <div class="w-base">
         <div class="d-t w-full">
-          <div class="d-t_cell align-v-m"><span id="header-logo"><img src="assets/i/logo-airalabrus-monitoring.png" srcset="assets/i/logo-airalabrus-monitoring@2x.png"></span>
+          <div class="d-t_cell align-v-m"><a id="header-logo" href="index.html"><img src="assets/i/logo-airalabrus-monitoring.png" srcset="assets/i/logo-airalabrus-monitoring@2x.png"></a>
           </div>
           <div class="d-t_cell align-v-m t-align-right"><a id="header-nav-toggler" href="#"><span class="sprite-basic-hamburger"></span><span class="sprite-basic-hamburger-close"></span></a>
             <ul class="header-nav">
               <li><a href="#">О проекте</a></li>
               <li><a href="#">Поддержка</a></li>
-              <li><a href="#">Вход для персонала</a>
+              <li><a href="#">admin / выйти</a>
               </li>
             </ul>
           </div>
@@ -34,11 +34,12 @@
       </div>
     </header>
     <main role="main">
-      <div class="w-base product valid">
+      <div class="w-base product invalid">
         <h1>Торт «медовый»</h1>
         <div class="row">
           <div class="col-md-3">
             <p><img class="i-block" alt="" src="assets/i/tmp/FC-cake-medovyi.jpg"></p>
+            <p class="t-color__red t-size__small">Для этого торта нарушены условия хранения или транспортировки. Снимите его с продажи или сообщите о нарушении ответственному лицу.</p>
             <p class="t-size__small">Неизменяемость данных, указанных на этой странице о продукте, гарантирована записью в независимой децентрализованной базе блокчейн</p>
             <p><a class="btn-green w-full" href="#" target="_blank">Проверить запись</a></p>
             <div class="product__label"></div>
@@ -69,7 +70,7 @@
           </div>
           <div class="col-md-3">
             <div class="product__prop_group accordion">
-              <div class="accordion__tab valid">Пункт траспортировки 1</div>
+              <div class="accordion__tab invalid">Пункт траспортировки 1</div>
               <div class="accordion__content">
                 <div class="product__prop">
                   <div class="product__prop_title">Информация о пункте:</div>
@@ -81,7 +82,7 @@
                 </div>
                 <div class="product__prop">
                   <div class="product__prop_title">Диапазон температур:</div>
-                  <div class="product__prop_value valid">0℃ … +4 ℃</div>
+                  <div class="product__prop_value invalid">0℃ … +4 ℃</div>
                 </div>
               </div>
               <div class="accordion__tab valid">Пункт траспортировки 2</div>

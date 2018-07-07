@@ -60,80 +60,80 @@ gulp.task('templates', function() {
 
 
 //svg and png sprites
-gulp.task('svgSprite', function () {
+// gulp.task('svgSprite', function () {
 
-  var basic = gulp.src('app/spritesrc/basic/*.svg')
-    .pipe(image())
-    .pipe(svgSprite({
-        "shape": {
-            "spacing": {
-                "padding": 0
-            }
-        },
-        "mode": {
-            "css": {
-                "dest": "./",
-                "layout": "horizontal",
-                "sprite": "sprite.svg",
-                "bust": false,
-                "render": {
-                    "scss": {
-                        "dest": "../../../app/styles/utilities/_sprite.scss",
-                        "template": "app/styles/templates/sprite-template.scss"
-                    }
-                }
-            }
-        }
-    }))
-    .pipe(gulp.dest('dist/assets/i'));
-
-
-    var browsers = gulp.src('app/spritesrc/browsers/*.svg')
-    .pipe(image())
-    .pipe(svgSprite({
-        "mode": {
-            "css": {
-                "spacing": {
-                    "padding": 2
-                },
-                "dest": "./",
-                "layout": "vertical",
-                "sprite": "sprite_browsers.svg",
-                "bust": false,
-                "render": {
-                    "scss": {
-                        "dest": "../../../app/styles/utilities/spriteBrowsers.scss",
-                        "template": "app/styles/templates/sprite-browsers-template.scss"
-                    }
-                }
-            }
-        }
-    }))
-    .pipe(gulp.dest('dist/assets/i'));
+//   var basic = gulp.src('app/spritesrc/basic/*.svg')
+//     .pipe(image())
+//     .pipe(svgSprite({
+//         "shape": {
+//             "spacing": {
+//                 "padding": 0
+//             }
+//         },
+//         "mode": {
+//             "css": {
+//                 "dest": "./",
+//                 "layout": "horizontal",
+//                 "sprite": "sprite.svg",
+//                 "bust": false,
+//                 "render": {
+//                     "scss": {
+//                         "dest": "../../../app/styles/utilities/_sprite.scss",
+//                         "template": "app/styles/templates/sprite-template.scss"
+//                     }
+//                 }
+//             }
+//         }
+//     }))
+//     .pipe(gulp.dest('dist/assets/i'));
 
 
-
-  return merge(basic, browsers);
-
-});
+//     var browsers = gulp.src('app/spritesrc/browsers/*.svg')
+//     .pipe(image())
+//     .pipe(svgSprite({
+//         "mode": {
+//             "css": {
+//                 "spacing": {
+//                     "padding": 2
+//                 },
+//                 "dest": "./",
+//                 "layout": "vertical",
+//                 "sprite": "sprite_browsers.svg",
+//                 "bust": false,
+//                 "render": {
+//                     "scss": {
+//                         "dest": "../../../app/styles/utilities/spriteBrowsers.scss",
+//                         "template": "app/styles/templates/sprite-browsers-template.scss"
+//                     }
+//                 }
+//             }
+//         }
+//     }))
+//     .pipe(gulp.dest('dist/assets/i'));
 
 
 
-gulp.task('pngSprite', ['svgSprite'], function() {
-    var basic = gulp.src('dist/assets/i/sprite.svg')
-        .pipe(svg2png())
-        .pipe(image())
-        .pipe(gulp.dest('dist/assets/i'));
+//   return merge(basic, browsers);
 
-    var browsers = gulp.src('dist/assets/i/sprite_browsers.svg')
-        .pipe(svg2png())
-        .pipe(image())
-        .pipe(gulp.dest('dist/assets/i'));
+// });
 
-  return merge(basic, browsers);
-});
 
-gulp.task('sprite', ['pngSprite']);
+
+// gulp.task('pngSprite', ['svgSprite'], function() {
+//     var basic = gulp.src('dist/assets/i/sprite.svg')
+//         .pipe(svg2png())
+//         .pipe(image())
+//         .pipe(gulp.dest('dist/assets/i'));
+
+//     var browsers = gulp.src('dist/assets/i/sprite_browsers.svg')
+//         .pipe(svg2png())
+//         .pipe(image())
+//         .pipe(gulp.dest('dist/assets/i'));
+
+//   return merge(basic, browsers);
+// });
+
+// gulp.task('sprite', ['pngSprite']);
 
 
 
@@ -152,9 +152,9 @@ gulp.task('live', function() {
 
 
 	//svg and png sprites
-	gulp.watch(['app/spritesrc/basic/*.svg', 'app/spritesrc/browsers/*.svg'], ['sprite']);
+	// gulp.watch(['app/spritesrc/basic/*.svg', 'app/spritesrc/browsers/*.svg'], ['sprite']);
 });
 
 
 //default
-gulp.task('default', ['scripts', 'styles', 'templates', 'sprite', 'live']);
+gulp.task('default', ['scripts', 'styles', 'templates', 'live']);

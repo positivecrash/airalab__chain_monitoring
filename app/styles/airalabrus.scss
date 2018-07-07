@@ -13,19 +13,11 @@
 @import "utilities/text";
 @import "utilities/animation";
 
-@import "utilities/sprite";
-@import "utilities/spriteBrowsers";
-@import "utilities/sprites_init";
-
 @import "sections/header";
 @import "sections/footer";
 @import "sections/forms";
 
-@import "pages/index";
-
 @import "plugins/bootstrap/bootstrap-grid";
-@import "plugins/bxslider";
-@import "plugins/fancybox";
 @import "plugins/overwrite";
 
 
@@ -243,6 +235,13 @@ section
       {
         background-color: darken($c-blue, 5%);
       }
+
+    &.disabled
+      {
+        background-color: $c-gray-3;
+        cursor: default;
+        pointer-events: none;
+      }
   }
 
 .catalog__paging_control_prev { background-image: inline-image('paging-prev.svg'); }
@@ -250,33 +249,62 @@ section
 
 
 
-.product__prop
+.product
   {
-    padding: rem(14px 0);
-    border-top: 1px solid $c-gray-3;
-
-    &:first-child
+    .col-md-3
       {
-        padding-top: 0;
-        border-top: 0;
+        position: relative;
+
+        .product__label
+          {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            display: block;
+            width: rem(54px);
+            height: rem(54px);
+
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+
+            @media screen and (max-width: $bootstrap-md){
+              right: 0;
+              width: rem(70px);
+              height: rem(46px);
+            }
+          }
       }
 
-    &:lasr-child { padding-bottom: 0; }
-  }
 
-.product__prop_title
-  {
-    font-size: rem(14px);
-    color: $c-gray-2;
-    padding-bottom: rem(6px);
-  }
 
-.product__prop_value
-  {
-    position: relative;
-
-    &.valid
+    .product__prop
       {
+        padding: rem(14px 0);
+        border-top: 1px solid $c-gray-3;
+
+        &:first-child
+          {
+            padding-top: 0;
+            border-top: 0;
+          }
+
+        &:lasr-child { padding-bottom: 0; }
+      }
+
+
+    .product__prop_title
+      {
+        font-size: rem(14px);
+        color: $c-gray-2;
+        padding-bottom: rem(6px);
+      }
+
+
+    .product__prop_value, .product__prop_group .accordion__tab
+      {
+        position: relative;
+
         &:after
           {
             content: "";
@@ -295,17 +323,92 @@ section
           }
       }
 
+
+    .product__prop_group
+      {
+        background-color: $c-gray-4;
+
+        .accordion__tab
+          {
+            padding-right: rem(30px);
+            font-size: rem(14px);
+
+            &:after
+              {
+                right: rem(10px);
+              }
+          }
+      }
+
+
+    .product__prop_value
+      {
+        &.invalid
+          {
+            &:after { background-image: inline-image('label-invalid-red.svg'); }
+          }
+
+        &.valid
+          {
+            &:after { background-image: inline-image('label-valid-green.svg'); }
+          }
+      }
+
+    .product__prop_group .accordion__tab
+      {
+        &.valid
+          {
+            &:after { background-image: inline-image('label-valid-white.svg'); }
+
+            &.active
+              {
+                &:after { background-image: inline-image('label-valid-dark.svg'); }
+              }
+          }
+
+
+        &.invalid
+          {
+            &:after { background-image: inline-image('label-invalid-white.svg'); }
+
+            &.active
+              {
+                &:after { background-image: inline-image('label-invalid-dark.svg'); }
+              }
+          }
+        
+      }
+
+
+
     &.valid
       {
-        &:after { background-image: inline-image('label-valid-green.svg'); }
+        .product__label
+          {
+            background-color: $c-green;
+            background-image: inline-image('label-valid-white.svg');
+          }
+
       }
-  }
 
-.product__prop_group
-  {
-    background-color: $c-gray-4;
-  }
 
+    &.invalid
+      {
+        .product__label
+          {
+            background-color: $c-red;
+            background-image: inline-image('label-invalid-white.svg');
+            background-size: 13%;
+          }
+      }
+
+
+
+}
+
+
+
+/*Accordion*/
 .accordion__tab
   {
     cursor: pointer;
@@ -322,6 +425,7 @@ section
       {
         background-color: $c-gray-3;
         color: $c-text;
+        cursor: default;
       }
   }
 
@@ -329,6 +433,8 @@ section
   {
     padding: rem(10px);
   }
+
+
 
 /* END OF PAGES */
 

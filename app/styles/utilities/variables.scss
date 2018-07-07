@@ -43,7 +43,9 @@ $modernizr-cssanimations: '.cssanimations';
 
 $grid-breakpoints: (
   sm: 320px,
-  md: 650px
+  md: 900px
 );
+
+$bootstrap-md: 900px;
 
 $rem-fallback: true;

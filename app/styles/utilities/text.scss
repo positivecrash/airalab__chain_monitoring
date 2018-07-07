@@ -80,16 +80,16 @@ li, p, blockquote
 
 .t-wrap-no { white-space: nowrap; }
 
-.t-color-red { color: $c-red; }
-.t-color-blue { color: $c-blue; }
-.t-color-green { color: $c-green; }
-.t-color-white { color: #fff; }
+.t-color__red { color: $c-red; }
+// .t-color-blue { color: $c-blue; }
+// .t-color-green { color: $c-green; }
+// .t-color-white { color: #fff; }
 
 .t-align-center { text-align: center; text-align: center!important; }
 .t-align-right { text-align: right; }
 .t-align-left { text-align: left; }
 
-.t-size-small { font-size: rem(12px); }
+.t-size__small { font-size: rem(12px); }
 
 
 
